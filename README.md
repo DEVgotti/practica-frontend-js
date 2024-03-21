@@ -4,12 +4,12 @@
   - State Management
     - <input type="checkbox" disabled /> Loading
     - <input type="checkbox" disabled /> Error
-    - <input type="checkbox" disabled /> Success
+    - <input type="checkbox" disabled checked /> Success
 - <input type="checkbox" disabled checked /> Login
   - State Management
     - <input type="checkbox" disabled /> Loading
     - <input type="checkbox" disabled /> Error
-    - <input type="checkbox" disabled /> Success
+    - <input type="checkbox" disabled checked /> Success
 - <input type="checkbox" disabled /> Announce creation
   - User Features
     - <input type="checkbox" disabled /> Logged in needed
