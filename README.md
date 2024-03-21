@@ -1,1 +1,40 @@
-# practica-frontend-js
+# TODO
+
+- <input type="checkbox" disabled checked /> Register
+  - State Management
+    - <input type="checkbox" disabled /> Loading
+    - <input type="checkbox" disabled /> Error
+    - <input type="checkbox" disabled /> Success
+- <input type="checkbox" disabled checked /> Login
+  - State Management
+    - <input type="checkbox" disabled /> Loading
+    - <input type="checkbox" disabled /> Error
+    - <input type="checkbox" disabled /> Success
+- <input type="checkbox" disabled /> Announce creation
+  - User Features
+    - <input type="checkbox" disabled /> Logged in needed
+  - State Management
+    - <input type="checkbox" disabled /> Loading
+    - <input type="checkbox" disabled /> Error
+    - <input type="checkbox" disabled /> Success
+- <input type="checkbox" disabled /> Announce list
+  - State Management
+    - <input type="checkbox" disabled /> Loading
+    - <input type="checkbox" disabled /> Error
+    - <input type="checkbox" disabled /> Empty
+    - <input type="checkbox" disabled /> Success
+- <input type="checkbox" disabled /> Announce details
+  - Properties
+    - <input type="checkbox" disabled /> Image (Optional)
+    - <input type="checkbox" disabled /> Title
+    - <input type="checkbox" disabled /> Description
+    - <input type="checkbox" disabled /> Price
+    - <input type="checkbox" disabled /> Buy / Sell
+  - User features
+    - <input type="checkbox" disabled /> Remove
+    - <input type="checkbox" disabled /> Edit
+  - State Management
+    - <input type="checkbox" disabled /> Loading
+    - <input type="checkbox" disabled /> Error
+    - <input type="checkbox" disabled /> Empty
+    - <input type="checkbox" disabled /> Success
