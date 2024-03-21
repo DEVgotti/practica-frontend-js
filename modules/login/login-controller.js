@@ -9,6 +9,15 @@ export const loginController = (loginForm) => {
 
   const handleLoginSubmit = async (loginForm) => {
     const { username, password } = getLoginData(loginForm)
+
+    try {
+      const jwt = await loginUser(username, password)
+      localStorage.setItem('token', jwt)
+      alert('login')
+      window.location.href = './index.html'
+    } catch (error) {
+      alert(error)
+    }
   }
 
   const getLoginData = (loginForm) => {
