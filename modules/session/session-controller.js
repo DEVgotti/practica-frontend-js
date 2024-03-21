@@ -5,14 +5,14 @@ export const sessionController = (nav) => {
     nav.innerHTML = buildAuthenticatedSession()
     const logoutButton = nav.querySelector('button')
     logoutButton.addEventListener('click', () => {
-      logoutButton.removeItem('token')
+      localStorage.removeItem('token')
       sessionController(nav)
     })
   } else {
     nav.innerHTML = buildAnonymousSession()
   }
+}
 
-  function isLoggedIn() {
-    return localStorage.getItem('token')
-  }
+export function isLoggedIn() {
+  return localStorage.getItem('token')
 }

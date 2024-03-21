@@ -1,10 +1,13 @@
 import { loginUser } from './login-model.js'
+import { isLoggedIn } from '../session/session-controller.js'
+
+if (isLoggedIn) window.location = 'index.html'
 
 export const loginController = (loginForm) => {
   loginForm.addEventListener('submit', (event) => {
     event.preventDefault()
 
-    handleLoginSubmit(loginForm)
+    if (!isLoggedIn) handleLoginSubmit(loginForm)
   })
 
   const handleLoginSubmit = async (loginForm) => {

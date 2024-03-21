@@ -1,13 +1,11 @@
 export const buildAnonymousSession = () => {
-  alert('1')
   return `<ul>
-    <li>Login</li>
-    <li>Signup</li>
+    <li><a href="./login.html">Login</a></li>
+    <li><a href="./register.html">Signup</a></li>
   </ul>`
 }
 
 export const buildAuthenticatedSession = () => {
-  alert('2')
   return `<ul>
     <li>Crear anuncio</li>
     <li><button>Cerrar sesión</button></li>
