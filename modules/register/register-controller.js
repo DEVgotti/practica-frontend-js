@@ -39,7 +39,7 @@ export function registerController(registerForm) {
 
     try {
       await createUser(username.value, password.value)
-
+      alert('Registrado con éxito')
       window.location.href = 'login.html'
     } catch (error) {
       submitButton.disabled = false

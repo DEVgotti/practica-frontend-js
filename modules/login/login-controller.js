@@ -13,7 +13,7 @@ export const loginController = (loginForm) => {
     try {
       const jwt = await loginUser(username, password)
       localStorage.setItem('token', jwt)
-      alert('login')
+      alert('Conectado con éxito')
       window.location.href = './index.html'
     } catch (error) {
       alert(error)
