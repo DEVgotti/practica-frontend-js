@@ -14,7 +14,7 @@ export const loginController = (loginForm) => {
       const jwt = await loginUser(username, password)
       localStorage.setItem('token', jwt)
       alert('Conectado con éxito')
-      window.location.href = './index.html'
+      window.location = '../../index.html'
     } catch (error) {
       alert(error)
     }
