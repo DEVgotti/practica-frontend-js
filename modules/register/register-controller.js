@@ -1,15 +1,13 @@
 import { createUser } from './register-model.js'
 import { isLoggedIn } from '../session/session-controller.js'
 
-if (isLoggedIn) window.location = 'index.html'
-
 export function registerController(registerForm) {
   const submitButton = registerForm.querySelector('button')
 
   registerForm.addEventListener('submit', (event) => {
     event.preventDefault()
 
-    if (!isLoggedIn) handleRegisterSubmit(registerForm)
+    handleRegisterSubmit(registerForm)
   })
 
   function handleRegisterSubmit(registerForm) {
