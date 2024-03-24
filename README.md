@@ -16,20 +16,20 @@
   - State Management
     - <input type="checkbox" disabled /> Loading
     - <input type="checkbox" disabled /> Error
-    - <input type="checkbox" disabled /> Success
+    - <input type="checkbox" disabled checked /> Success
 - <input type="checkbox" disabled /> Announce list
   - State Management
     - <input type="checkbox" disabled /> Loading
     - <input type="checkbox" disabled /> Error
     - <input type="checkbox" disabled /> Empty
-    - <input type="checkbox" disabled /> Success
+    - <input type="checkbox" disabled checked /> Success
 - <input type="checkbox" disabled /> Announce details
   - Properties
-    - <input type="checkbox" disabled /> Image (Optional)
-    - <input type="checkbox" disabled /> Title
-    - <input type="checkbox" disabled /> Description
-    - <input type="checkbox" disabled /> Price
-    - <input type="checkbox" disabled /> Buy / Sell
+    - <input type="checkbox" disabled checked /> Image (Optional)
+    - <input type="checkbox" disabled checked /> Title
+    - <input type="checkbox" disabled checked /> Description
+    - <input type="checkbox" disabled checked /> Price
+    - <input type="checkbox" disabled checked /> Buy / Sell
   - User features
     - <input type="checkbox" disabled /> Remove
     - <input type="checkbox" disabled /> Edit
@@ -37,4 +37,4 @@
     - <input type="checkbox" disabled /> Loading
     - <input type="checkbox" disabled /> Error
     - <input type="checkbox" disabled /> Empty
-    - <input type="checkbox" disabled /> Success
+    - <input type="checkbox" disabled checked /> Success
