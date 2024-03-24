@@ -3,24 +3,24 @@
 - <input type="checkbox" disabled checked /> Register
   - State Management
     - <input type="checkbox" disabled /> Loading
-    - <input type="checkbox" disabled /> Error
+    - <input type="checkbox" disabled checked /> Error
     - <input type="checkbox" disabled checked /> Success
 - <input type="checkbox" disabled checked /> Login
   - State Management
     - <input type="checkbox" disabled /> Loading
-    - <input type="checkbox" disabled /> Error
+    - <input type="checkbox" disabled checked /> Error
     - <input type="checkbox" disabled checked /> Success
 - <input type="checkbox" disabled /> Announce creation
   - User Features
     - <input type="checkbox" disabled /> Logged in needed
   - State Management
     - <input type="checkbox" disabled /> Loading
-    - <input type="checkbox" disabled /> Error
+    - <input type="checkbox" disabled checked /> Error
     - <input type="checkbox" disabled checked /> Success
 - <input type="checkbox" disabled /> Announce list
   - State Management
     - <input type="checkbox" disabled /> Loading
-    - <input type="checkbox" disabled /> Error
+    - <input type="checkbox" disabled checked /> Error
     - <input type="checkbox" disabled /> Empty
     - <input type="checkbox" disabled checked /> Success
 - <input type="checkbox" disabled /> Announce details
@@ -35,6 +35,6 @@
     - <input type="checkbox" disabled /> Edit
   - State Management
     - <input type="checkbox" disabled /> Loading
-    - <input type="checkbox" disabled /> Error
+    - <input type="checkbox" disabled checked /> Error
     - <input type="checkbox" disabled /> Empty
     - <input type="checkbox" disabled checked /> Success

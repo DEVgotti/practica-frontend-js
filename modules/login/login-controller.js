@@ -13,7 +13,7 @@ export const loginController = (loginForm) => {
     const { username, password } = getLoginData(loginForm)
 
     try {
-      const jwt = await loginUser(username, password)
+      const jwt = await loginUser(username, password, loginForm)
       localStorage.setItem('token', jwt)
       dispatchEvent(
         'success-login-in',

@@ -20,7 +20,14 @@ export function registerController(registerForm) {
     }
 
     for (const error of errors) {
-      alert(error)
+      dispatchEvent(
+        'error-filling-form',
+        {
+          message: error,
+          type: 'error',
+        },
+        registerForm
+      )
     }
 
     if (errors.length === 0) {

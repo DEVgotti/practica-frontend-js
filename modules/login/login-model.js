@@ -1,4 +1,4 @@
-export const loginUser = async (username, password) => {
+export const loginUser = async (username, password, loginForm) => {
   const body = {
     username,
     password,
@@ -19,6 +19,13 @@ export const loginUser = async (username, password) => {
     if (!response.ok) throw new Error(data.message)
     if (response.ok) return data.accessToken
   } catch (error) {
-    alert(error.message)
+    dispatchEvent(
+      'error-login-in',
+      {
+        message: error,
+        type: 'error',
+      },
+      loginForm
+    )
   }
 }

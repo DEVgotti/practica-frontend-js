@@ -16,4 +16,8 @@ announceCreation.addEventListener('error-creating-announce', (event) => {
   event.stopPropagation()
   showNotification(event.detail.message, event.detail.type)
 })
+announceCreation.addEventListener('success-creating-announce', (event) => {
+  event.stopPropagation()
+  showNotification(event.detail.message, event.detail.type)
+})
 announceCreationController(announceCreation)

@@ -1,3 +1,8 @@
+.notification-list {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
 .notifications-container {
   width: 320px;
   height: auto;

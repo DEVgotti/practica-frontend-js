@@ -7,7 +7,7 @@ export async function announceDetailController(announceDetail) {
   const announceId = params.get('announceId')
 
   try {
-    const announce = await getAnnounceDetail(announceId)
+    const announce = await getAnnounceDetail(announceId, announceDetail)
     const details = announceDetail.querySelector('#details')
     details.innerHTML = buildAnnounceDetail(announce)
   } catch (error) {

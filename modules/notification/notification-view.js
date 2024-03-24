@@ -10,8 +10,10 @@ export function buildNotification(message, type) {
             </svg>
           </div>
           <div class="${type}-prompt-container">
-            <p class="${type}-prompt-heading">${message}
-            </p>
+            <p class="${type}-prompt-heading">ERROR!
+            </p><div class="${type}-prompt-wrap">
+              ${message}
+          </div>
           </div>
         </div>
       </div>
