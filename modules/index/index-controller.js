@@ -1,5 +1,6 @@
 import { getAnnounces } from './index-model.js'
 import { buildAnnounce } from './index-view.js'
+import { dispatchEvent } from '../../utils/dispatchEvent.js'
 
 export async function announceListController(announceList) {
   try {
@@ -9,7 +10,14 @@ export async function announceListController(announceList) {
       renderAnnounces(announces, announceList)
     }
   } catch (error) {
-    alert(error)
+    dispatchEvent(
+      'error-loading-announces',
+      {
+        message: error,
+        type: 'error',
+      },
+      announceList
+    )
   }
 }
 

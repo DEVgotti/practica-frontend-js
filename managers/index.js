@@ -6,4 +6,9 @@ const announceList = document.querySelector('.announce-list')
 
 sessionController(session)
 
+announceList.addEventListener('error-loading-announce', (event) => {
+  // showNotification
+  event.stopPropagation()
+})
+
 announceListController(announceList)

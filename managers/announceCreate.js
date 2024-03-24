@@ -7,4 +7,9 @@ if (!token) {
 }
 
 const announceCreation = document.querySelector('#new-announce')
+
+announceCreation.addEventListener('error-creating-announce', (event) => {
+  // showNotification
+  event.stopPropagation()
+})
 announceCreationController(announceCreation)

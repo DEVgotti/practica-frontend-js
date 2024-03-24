@@ -1,3 +1,4 @@
+import { dispatchEvent } from '../../../utils/dispatchEvent.js'
 import { createAnnounce } from './AnnounceCreateModel.js'
 
 export function announceCreationController(announceCreation) {
@@ -17,7 +18,14 @@ export function announceCreationController(announceCreation) {
         window.location = 'index.html'
       }, 2000)
     } catch (error) {
-      alert(error)
+      dispatchEvent(
+        'error-creating-announce',
+        {
+          message: error,
+          type: 'error',
+        },
+        announceCreation
+      )
     }
   })
 }

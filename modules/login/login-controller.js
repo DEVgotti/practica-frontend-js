@@ -1,5 +1,6 @@
 import { loginUser } from './login-model.js'
 import { isLoggedIn } from '../session/session-controller.js'
+import { dispatchEvent } from '../../utils/dispatchEvent.js'
 
 export const loginController = (loginForm) => {
   loginForm.addEventListener('submit', (event) => {
@@ -17,7 +18,14 @@ export const loginController = (loginForm) => {
       alert('Conectado con éxito')
       window.location = '../../index.html'
     } catch (error) {
-      alert(error)
+      dispatchEvent(
+        'error-login-in',
+        {
+          message: error,
+          type: 'error',
+        },
+        loginForm
+      )
     }
   }
 

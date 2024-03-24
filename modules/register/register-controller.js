@@ -1,5 +1,6 @@
 import { createUser } from './register-model.js'
 import { isLoggedIn } from '../session/session-controller.js'
+import { dispatchEvent } from '../../utils/dispatchEvent.js'
 
 export function registerController(registerForm) {
   const submitButton = registerForm.querySelector('button')
@@ -44,7 +45,14 @@ export function registerController(registerForm) {
       window.location.href = 'login.html'
     } catch (error) {
       submitButton.disabled = false
-      alert(error)
+      dispatchEvent(
+        'error-signing-up',
+        {
+          message: error,
+          type: 'error',
+        },
+        registerForm
+      )
     }
   }
 }
