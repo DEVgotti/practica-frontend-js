@@ -6,6 +6,10 @@ export async function announceDetailController(announceDetail) {
   const params = new URLSearchParams(window.location.search)
   const announceId = params.get('announceId')
 
+  if (!announceId) {
+    window.location.href = './index.html'
+  }
+
   try {
     const announce = await getAnnounceDetail(announceId, announceDetail)
     const details = announceDetail.querySelector('#details')
