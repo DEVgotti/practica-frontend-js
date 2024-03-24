@@ -1,8 +1,12 @@
 import { loginUser } from './login-model.js'
 import { isLoggedIn } from '../session/session-controller.js'
 import { dispatchEvent } from '../../utils/dispatchEvent.js'
+import { loaderController } from '../loader/loader-controller.js'
 
 export const loginController = (loginForm) => {
+  const spinner = loginForm.querySelector('#loader')
+  const { showLoader, hideLoader } = loaderController(spinner)
+
   loginForm.addEventListener('submit', (event) => {
     event.preventDefault()
 
@@ -13,8 +17,10 @@ export const loginController = (loginForm) => {
     const { username, password } = getLoginData(loginForm)
 
     try {
+      showLoader()
       const jwt = await loginUser(username, password, loginForm)
       localStorage.setItem('token', jwt)
+
       dispatchEvent(
         'success-login-in',
         {
@@ -36,6 +42,8 @@ export const loginController = (loginForm) => {
         },
         loginForm
       )
+    } finally {
+      hideLoader()
     }
   }
 

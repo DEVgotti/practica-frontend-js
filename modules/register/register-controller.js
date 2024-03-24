@@ -1,8 +1,12 @@
 import { createUser } from './register-model.js'
 import { isLoggedIn } from '../session/session-controller.js'
 import { dispatchEvent } from '../../utils/dispatchEvent.js'
+import { loaderController } from '../loader/loader-controller.js'
 
 export function registerController(registerForm) {
+  const spinner = loginForm.querySelector('#loader')
+  const { showLoader, hideLoader } = loaderController(spinner)
+
   const submitButton = registerForm.querySelector('button')
 
   registerForm.addEventListener('submit', (event) => {
@@ -48,6 +52,7 @@ export function registerController(registerForm) {
 
     try {
       await createUser(username.value, password.value)
+      showLoader()
       dispatchEvent(
         'success-signing-up',
         {
@@ -70,6 +75,8 @@ export function registerController(registerForm) {
         },
         registerForm
       )
+    } finally {
+      hideLoader()
     }
   }
 }

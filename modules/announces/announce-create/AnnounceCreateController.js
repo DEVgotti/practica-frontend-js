@@ -1,7 +1,11 @@
 import { dispatchEvent } from '../../../utils/dispatchEvent.js'
 import { createAnnounce } from './AnnounceCreateModel.js'
+import { loaderController } from '../loader/loader-controller.js'
 
 export function announceCreationController(announceCreation) {
+  const spinner = loginForm.querySelector('#loader')
+  const { showLoader, hideLoader } = loaderController(spinner)
+
   announceCreation.addEventListener('submit', async (event) => {
     event.preventDefault()
 
@@ -14,6 +18,8 @@ export function announceCreationController(announceCreation) {
 
     try {
       await createAnnounce(title, price, image, type, description)
+
+      showLoader()
 
       dispatchEvent(
         'success-creating-announce',
@@ -36,6 +42,8 @@ export function announceCreationController(announceCreation) {
         },
         announceCreation
       )
+    } finally {
+      hideLoader()
     }
   })
 }
