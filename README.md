@@ -21,7 +21,7 @@
   - State Management
     - <input type="checkbox" disabled /> Loading
     - <input type="checkbox" disabled checked /> Error
-    - <input type="checkbox" disabled /> Empty
+    - <input type="checkbox" disabled checked /> Empty
     - <input type="checkbox" disabled checked /> Success
 - <input type="checkbox" disabled /> Announce details
   - Properties
@@ -36,5 +36,5 @@
   - State Management
     - <input type="checkbox" disabled /> Loading
     - <input type="checkbox" disabled checked /> Error
-    - <input type="checkbox" disabled /> Empty
+    - <input type="checkbox" disabled checked /> Empty
     - <input type="checkbox" disabled checked /> Success
