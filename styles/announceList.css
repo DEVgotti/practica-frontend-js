@@ -1,0 +1,19 @@
+.announce-list {
+  display: flex;
+  width: 90vw;
+  margin: 10px auto;
+  gap: 1rem;
+}
+
+.announce {
+  display: flex;
+  flex-direction: column;
+}
+
+.announce h3 a {
+  color: #8e0045;
+  text-decoration: none;
+}
+.announce h3 a:hover {
+  text-decoration: underline;
+}

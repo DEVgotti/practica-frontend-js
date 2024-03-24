@@ -5,37 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Whatapoop</title>
 
+    <link rel="stylesheet" href="./styles/normalize.css" />
     <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/nav.css" />
     <link rel="stylesheet" href="./modules/notification/style.css" />
+    <link rel="stylesheet" href="./styles/announceCreate.css" />
   </head>
   <body>
+    <nav id="session"></nav>
     <section class="notification-list"></section>
-    <h1>Crear nuevo anuncio</h1>
-    <form id="new-announce">
-      <div>
-        <label for="title">Titulo:</label>
-        <input type="text" name="title" id="title" required />
-      </div>
-      <div>
-        <label for="price">Precio:</label>
-        <input type="number" name="price" id="price" required />
-      </div>
-      <div>
-        <label for="image">Imagen del producto:</label>
-        <input type="text" name="image" id="image" required />
-      </div>
-      <div>
-        <label for="type">¿Que ofreces?</label>
-        <input type="radio" name="type" value="1" /> Comprar &bull; <input type="radio" name="type" value="2" /> Vender
-      </div>
-      <div>
-        <label for="type">Descripción</label>
-        <textarea rows="10" cols="5" name="description"></textarea>
-      </div>
-      <div>
-        <button type="submit">Crear usuario</button>
-      </div>
-    </form>
+    <section class="create_announce">
+      <form class="form" id="new-announce">
+        <p class="title">Crear nuevo anuncio</p>
+        <p class="message">Publica tu anuncio en Whatapoop</p>
+        <label>
+          <input class="input" type="text" name="title" id="title" required />
+          <span>Título</span>
+        </label>
+        <label for="price">
+          <input class="input" type="number" name="price" id="price" required />
+          <span>Precio</span>
+        </label>
+        <label for="image">
+          <input class="input" type="text" name="image" id="image" required />
+          <span>Imagen del producto</span>
+        </label>
+        <span>¿Que ofreces?</span>
+        <div class="radio">
+          <input label="Comprar" type="radio" name="type" value="1" /> <input label="Vender" type="radio" name="type" value="2" />
+        </div>
+
+        <textarea rows="10" cols="5" placeholder="Descripción" name="description"></textarea>
+
+        <button class="submit" type="submit">Crear usuario</button>
+        <p class="signin">¿Ya tienes cuenta? <a href="login.html">Conéctate</a></p>
+      </form>
+    </section>
 
     <script type="module" src="./managers/announceCreate.js"></script>
   </body>
