@@ -1,5 +1,9 @@
 import { sessionController } from '../modules/session/session-controller.js'
+import { announceListController } from '../modules/index/index-controller.js'
 
 const session = document.querySelector('#session')
+const announceList = document.querySelector('.announce-list')
 
 sessionController(session)
+
+announceListController(announceList)
