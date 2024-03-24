@@ -1,0 +1,41 @@
+{
+  "announces": [
+    {
+      "title": "PlayStation 5",
+      "price": "200",
+      "image": "https://cdn.idealo.com/folder/Product/203260/6/203260641/s11_produktbild_gross/sony-playstation-5-ps5-fc-24.jpg",
+      "type": "2",
+      "description": "PlayStation 5 semi nueva",
+      "userId": 8,
+      "updatedAt": "2024-03-24T17:22:56.624Z",
+      "id": 1
+    },
+    {
+      "title": "XBOX One",
+      "price": "150",
+      "image": "https://m.media-amazon.com/images/I/510LV3K6PnL._AC_UF894,1000_QL80_.jpg",
+      "type": "2",
+      "description": "XBOX One semi nueva",
+      "userId": 8,
+      "updatedAt": "2024-03-24T17:23:39.743Z",
+      "id": 2
+    },
+    {
+      "title": "Nintendo Switch",
+      "price": "100",
+      "image": "https://m.media-amazon.com/images/I/41g40oknL0L._AC_UF894,1000_QL80_.jpg",
+      "type": "1",
+      "description": "Busco Switch, pago máximo 100€",
+      "userId": 8,
+      "updatedAt": "2024-03-24T17:24:24.368Z",
+      "id": 3
+    }
+  ],
+  "users": [
+    {
+      "username": "User",
+      "password": "$2b$10$E5OQsk1OnLemmkqFU92.Zu0Q6uzjDe/E.lPw15hNxCcwiCkkvyoeu",
+      "id": 8
+    }
+  ]
+}
