@@ -19,11 +19,13 @@ export async function getAnnounceDetail(announceId, announceDetail) {
     }
 
     const announce = {
+      id: data.id,
       title: data.title,
       price: data.price,
       image: data.image,
       type: announceType,
       desc: data.description,
+      userId: data.userId,
     }
 
     return announce
@@ -36,5 +38,23 @@ export async function getAnnounceDetail(announceId, announceDetail) {
       },
       announceDetail
     )
+  }
+}
+
+export async function deleteAnnounce(announceId, token) {
+  try {
+    const response = await fetch(`http://192.168.1.129:8000/api/announces/${announceId}`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+      method: 'DELETE',
+    })
+
+    if (!response.ok) {
+      const data = await response.json()
+      throw new Error(data.message)
+    }
+  } catch (error) {
+    throw new Error('Error eliminando anuncio')
   }
 }

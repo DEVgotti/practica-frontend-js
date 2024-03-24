@@ -1,4 +1,4 @@
-export const createAnnounce = async (title, price, image, type, description) => {
+export const createAnnounce = async (title, price, image, type, description, userId) => {
   const token = localStorage.getItem('token')
 
   const body = {
@@ -7,6 +7,7 @@ export const createAnnounce = async (title, price, image, type, description) => 
     image,
     type,
     description,
+    userId,
   }
 
   let response
