@@ -1,16 +1,15 @@
 import { getAnnounces } from './AnnounceListModel.js'
 import { buildAnnounce, buildEmptyAnnounceList } from './AnnounceListView.js'
 import { dispatchEvent } from '../../../utils/dispatchEvent.js'
-import { loaderController } from '../loader/loader-controller.js'
+import { loaderController } from '../../loader/loader-controller.js'
 
 export async function announceListController(announceList) {
-  const spinner = loginForm.querySelector('#loader')
+  const spinner = announceList.querySelector('#loader')
   const { showLoader, hideLoader } = loaderController(spinner)
 
   try {
     showLoader()
     const announces = await getAnnounces()
-    console.log(announces)
     if (announces.length > 0) {
       renderAnnounces(announces, announceList)
     } else {

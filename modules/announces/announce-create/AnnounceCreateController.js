@@ -1,9 +1,9 @@
 import { dispatchEvent } from '../../../utils/dispatchEvent.js'
 import { createAnnounce } from './AnnounceCreateModel.js'
-import { loaderController } from '../loader/loader-controller.js'
+import { loaderController } from '../../loader/loader-controller.js'
 
 export function announceCreationController(announceCreation) {
-  const spinner = loginForm.querySelector('#loader')
+  const spinner = announceCreation.querySelector('#loader')
   const { showLoader, hideLoader } = loaderController(spinner)
 
   announceCreation.addEventListener('submit', async (event) => {

@@ -4,7 +4,7 @@ import { dispatchEvent } from '../../../utils/dispatchEvent.js'
 import { loaderController } from '../loader/loader-controller.js'
 
 export async function announceDetailController(announceDetail) {
-  const spinner = loginForm.querySelector('#loader')
+  const spinner = announceDetail.querySelector('#loader')
   const { showLoader, hideLoader } = loaderController(spinner)
 
   const params = new URLSearchParams(window.location.search)
