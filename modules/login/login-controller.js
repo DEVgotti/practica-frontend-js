@@ -15,8 +15,18 @@ export const loginController = (loginForm) => {
     try {
       const jwt = await loginUser(username, password)
       localStorage.setItem('token', jwt)
-      alert('Conectado con éxito')
-      window.location = '../../index.html'
+      dispatchEvent(
+        'success-login-in',
+        {
+          message: '¡Te has conectado con éxito!',
+          type: 'success',
+        },
+        loginForm
+      )
+
+      setTimeout(() => {
+        window.location = '../../index.html'
+      }, 2000)
     } catch (error) {
       dispatchEvent(
         'error-login-in',

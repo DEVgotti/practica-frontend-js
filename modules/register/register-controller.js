@@ -41,8 +41,18 @@ export function registerController(registerForm) {
 
     try {
       await createUser(username.value, password.value)
-      alert('Registrado con éxito')
-      window.location.href = 'login.html'
+      dispatchEvent(
+        'success-signing-up',
+        {
+          message: '¡Te has registrado con éxito!',
+          type: 'success',
+        },
+        registerForm
+      )
+
+      setTimeout(() => {
+        window.location.href = 'login.html'
+      }, 2000)
     } catch (error) {
       submitButton.disabled = false
       dispatchEvent(

@@ -1,6 +1,6 @@
-import { getAnnounces } from './index-model.js'
-import { buildAnnounce } from './index-view.js'
-import { dispatchEvent } from '../../utils/dispatchEvent.js'
+import { getAnnounces } from './AnnounceListModel.js'
+import { buildAnnounce } from './AnnounceListView.js'
+import { dispatchEvent } from '../../../utils/dispatchEvent.js'
 
 export async function announceListController(announceList) {
   try {

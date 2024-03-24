@@ -14,6 +14,16 @@ export function announceCreationController(announceCreation) {
 
     try {
       await createAnnounce(title, price, image, type, description)
+
+      dispatchEvent(
+        'success-creating-announce',
+        {
+          message: '¡Anuncio creado con éxito!',
+          type: 'success',
+        },
+        announceCreation
+      )
+
       setTimeout(() => {
         window.location = 'index.html'
       }, 2000)
