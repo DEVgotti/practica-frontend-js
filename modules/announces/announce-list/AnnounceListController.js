@@ -1,5 +1,5 @@
 import { getAnnounces } from './AnnounceListModel.js'
-import { buildAnnounce } from './AnnounceListView.js'
+import { buildAnnounce, buildEmptyAnnounceList } from './AnnounceListView.js'
 import { dispatchEvent } from '../../../utils/dispatchEvent.js'
 
 export async function announceListController(announceList) {
@@ -8,6 +8,8 @@ export async function announceListController(announceList) {
     console.log(announces)
     if (announces.length > 0) {
       renderAnnounces(announces, announceList)
+    } else {
+      announceList.innerHTML = buildEmptyAnnounceList()
     }
   } catch (error) {
     dispatchEvent(

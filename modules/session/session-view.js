@@ -6,8 +6,9 @@ export const buildAnonymousSession = () => {
 }
 
 export const buildAuthenticatedSession = () => {
-  return `<ul>
-    <li><a href="./create-announce.html">Crear anuncio</a></li>
-    <li><button>Cerrar sesión</button></li>
-  </ul>`
+  return `
+    <div><a href="./index.html">Lista de anuncios</a></div>
+    <div><a href="./create-announce.html">Crear anuncio</a></div>
+    <div><button>Cerrar sesión</button></div>
+  `
 }

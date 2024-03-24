@@ -1,3 +1,4 @@
+import { sessionController } from '../modules/session/session-controller.js'
 import { announceCreationController } from '../modules/announces/announce-create/AnnounceCreateController.js'
 import { notificationController } from '../modules/notification/notification-controller.js'
 
@@ -7,6 +8,7 @@ if (!token) {
   window.location.href = 'index.html'
 }
 
+const session = document.querySelector('#session')
 const notificationList = document.querySelector('.notification-list')
 const announceCreation = document.querySelector('#new-announce')
 
@@ -20,4 +22,6 @@ announceCreation.addEventListener('success-creating-announce', (event) => {
   event.stopPropagation()
   showNotification(event.detail.message, event.detail.type)
 })
+
+sessionController(session)
 announceCreationController(announceCreation)
