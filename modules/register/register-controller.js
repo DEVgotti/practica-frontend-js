@@ -4,7 +4,7 @@ import { dispatchEvent } from '../../utils/dispatchEvent.js'
 import { loaderController } from '../loader/loader-controller.js'
 
 export function registerController(registerForm) {
-  const spinner = loginForm.querySelector('#loader')
+  const spinner = registerForm.querySelector('#loader')
   const { showLoader, hideLoader } = loaderController(spinner)
 
   const submitButton = registerForm.querySelector('button')
